@@ -8,16 +8,16 @@ This app is for:
     - receiving alerts when in proximity to a tagged location
 
 
-# Other Notes
+## Other Notes
 
-## ng-phonegap 
+### ng-phonegap 
 
 This app is based on the build tools workflow template ng-phonegap, which brings the awesome Bower and Grunt.
 
  [ng-phonegap] - An opinionated workflow for building kick-ass mobile apps using Cordova and AngularJS.
 
 
-# Version History
+## Version History
 
 Version  | Date       | Description
 -------- | ---------- | ------------
