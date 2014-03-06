@@ -1,6 +1,6 @@
 # RangerDanger
 
-A mobile apps using Cordova, AngularJS, Socket.io, and the [Ionic Framework](http://http://ionicframework.com/) on the client, and Node, Sails.js, and MongoDB on Heroku for the backend.
+A mobile app using Cordova, AngularJS, Socket.io, and the [Ionic Framework](http://http://ionicframework.com/) on the client, and Node, Sails.js, and MongoDB on Heroku for the backend.
 
 This app is for:
     - geotagging a location
