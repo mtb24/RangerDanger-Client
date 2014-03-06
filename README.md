@@ -10,11 +10,7 @@ This app is for:
 
 ## Other Notes
 
-### ng-phonegap
-
-This app is based on the build tools workflow template ng-phonegap, which brings the awesome Bower and Grunt.
-
- [ng-phonegap](https://github.com/calvinl/ng-phonegap) - An opinionated workflow for building kick-ass mobile apps using Cordova and AngularJS.
+This app is based on the build tools workflow template [ng-phonegap](https://github.com/calvinl/ng-phonegap), which brings the awesome Bower and Grunt.
 
 
 ## Version History
