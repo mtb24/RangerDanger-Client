@@ -1,11 +1,11 @@
-# RangerDanger
+# RangerDanger :cop:
 
 A mobile app using Cordova, AngularJS, Socket.io, and the [Ionic Framework](http://http://ionicframework.com/) on the client, and Node, Sails.js, and MongoDB on Heroku for the backend.
 
 This app is for:
-    - geotagging a location
-    - viewing other tagged locations on a map
-    - receiving alerts when in proximity to a tagged location
+* geotagging a location
+* viewing other tagged locations on a map
+* receiving alerts when in proximity to a tagged location
 
 
 ## Other Notes
