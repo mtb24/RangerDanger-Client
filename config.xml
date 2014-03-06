@@ -2,9 +2,9 @@
 <widget id="com.racerxsoftware.rangerdanger" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>RangerDanger</name>
     <description>
-        A map based application for sharing geolocations.
+        A map based application for sharing geotagged locations.
     </description>
-    <author email="kendowney.com@gmai.com" href="http://cordova.io">
+    <author email="kendowney.com@gmai.com" href="https://github.com/mtb24/RangerDanger-Client">
         Ken Downey
     </author>
     <content src="index.html" />
