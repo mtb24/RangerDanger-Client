@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html data-ng-app="rangerdanger">
+  <head>
+    <meta charset="utf-8">
+    <title>RangerDanger!</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+
+    <script src="js/ionic.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-animate.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/angular/angular-touch.min.js"></script>
+    <script src="js/angular/angular-sanitize.min.js"></script>
+    <script src="js/angular-ui/angular-ui-router.min.js"></script>
+    <script src="js/ionic-angular.min.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap -->
+
+    <!-- Leaflet script -->
+    <script src="js/angular-leaflet-directive.min.js"></script>
+    <script src="js/leaflet.js"></script>
+
+    <!-- Main app scripts  -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+
+    <style type="text/css">
+      #alertmap, #modalmap { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+  </head>
+  <body>
+
+    <ion-nav-bar ion-animation="nav-title-slide-ios7" type="bar-positive" back-button-type="button-icon" back-button-icon="ion-arrow-left-c"></ion-nav-bar>
+
+    <ion-nav-view ion-animation="slide-left-right"></ion-nav-view>
+
+    <!-- Tabs template -->
+    <script id="tabs.html" type="text/ng-template">
+      <ion-tabs tabs-style="tabs-icon-top" tabs-type="tabs-positive">
+        <ion-tab title="Home" icon="ion-home" href="#/tab/home">
+          <ion-nav-view name="home-tab"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Map" icon="ion-alert-circled" href="#/tab/map">
+          <ion-nav-view name="map-tab"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Preferences" icon="ion-settings" ui-sref="tabs.preferences">
+          <ion-nav-view name="preferences-tab"></ion-nav-view>
+        </ion-tab>
+      </ion-tabs>
+    </script>
+
+    <!-- Home page template -->
+    <script id="home.html" type="text/ng-template">
+      <ion-view title="'Ranger Danger'">
+        <ion-content has-header="true" padded="true">
+            <button id="tagMyLocation" class="button button-block button-assertive" ng-click="tagLocation()">Tag This Location</button>
+            <br />
+            <button id="showModal" class="button button-block button-energized" ng-click="openModal()">Tag Nearby Location</button>
+            <div id="alertsDiv">
+              <div ng-repeat="alert in alerts"><em>{{ alert.message }} - {{alert.createdAt | date:'medium'}}</em> - Lat: {{alert.lat}}, Lng: {{alert.lng}}</div>
+            </div>
+        </ion-content>
+    </script>
+
+    <!-- Home page modal template -->
+    <script id="modal.html" type="text/ng-template">
+      <div class="modal">
+        <ion-header class="bar bar-header bar-assertive">
+          <button class="button button-clear button-positive" ng-click="saveModal()">Save</button>
+          <h1 class="title">Drop pin on map</h1>
+          <button class="button button-clear button-positive" ng-click="closeModal()">Cancel</button>
+        </ion-header>
+        <ion-content has-header="true" padded="true">
+          <leaflet id="modalmap" markers="marker" center="center" width="640" height="400"></leaflet>
+        </ion-content>
+      </div>
+    </script>
+
+    <!-- Map page template -->
+    <script id="map.html" type="text/ng-template">
+      <ion-view title="'Alerts Map'">
+        <ion-content has-header="true" padded="true">
+          <map>
+            <leaflet id="alertmap" markers="markers" watch-markers="false" center="center" width="640" height="400"></leaflet>
+          </map>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <!-- Preferences page template -->
+    <script id="preferences.html" type="text/ng-template">
+      <ion-view title="'Preferences'">
+        <ion-content has-header="true" padded="true">
+          <form name="preferencesForm" ng-controller="prefController">
+            <ul class="list">
+              <li class="item item-toggle">
+                Alert Type: {{ settings.alert_on }}
+                <label class="toggle">
+                  <input type="checkbox" id="alert-on" name="alert-on" checked="checked" ng-model="settings.alert_on" ng-true-value="On" ng-false-value="Off">
+                  <div class="track">
+                    <div class="handle"></div>
+                  </div>
+                </label>
+              </li>
+              <li class="item">
+                Alert distance {{ settings.alert_distance }} miles
+                <div id="distance" class="item range range-assertive">
+                  <i class="icon ion-ios7-bolt-outline"></i>
+                  <input type="range" id="alert-distance" name="alert-distance" min="0" max="10" value="3" ng-model="settings.alert_distance" onchange="Utilities.updateSlider(document.getElementById('alert-distance'));">
+                  <i class="icon ion-ios7-bolt"></i>
+                </div>
+              </li>
+              <li class="item">
+                Alert Freshness {{ settings.alert_freshness }} minutes
+                <div id="freshness" class="item range range-assertive">
+                  <i class="icon ion-ios7-bolt-outline"></i>
+                  <input type="range" id="alert-freshness" name="alert-freshness" min="0" max="720" value="60" ng-model="settings.alert_freshness" onchange="Utilities.updateSlider(document.getElementById('alert-freshness'));">
+                  <i class="icon ion-ios7-bolt"></i>
+                </div>
+              </li>
+            </ul>
+          </form>
+          {{ settings }}
+        </ion-content>
+      </ion-view>
+    </script>
+
+  </body>
+</html>

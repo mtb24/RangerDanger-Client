@@ -1,0 +1,45 @@
+2014-01-23 16:53:17.092 RangerDanger[28670:80b] Multi-tasking -> Device: YES, App: YES
+2014-01-23 16:53:17.221 RangerDanger[28670:80b] Unlimited access to network resources
+2014-01-23 16:53:17.238 RangerDanger[28670:80b] Fix applied for database locations?: YES
+2014-01-23 16:53:19.754 RangerDanger[28670:80b] Resetting plugins due to page load.
+2014-01-23 16:53:20.265 RangerDanger[28670:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html
+2014-01-24 10:12:56.102 RangerDanger[30385:80b] Multi-tasking -> Device: YES, App: YES
+2014-01-24 10:12:56.156 RangerDanger[30385:80b] Unlimited access to network resources
+2014-01-24 10:12:57.697 RangerDanger[30385:80b] Resetting plugins due to page load.
+2014-01-24 10:12:58.336 RangerDanger[30385:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html
+2014-01-26 17:01:09.443 RangerDanger[40535:80b] Multi-tasking -> Device: YES, App: YES
+2014-01-26 17:01:09.514 RangerDanger[40535:80b] Unlimited access to network resources
+2014-01-26 17:01:11.742 RangerDanger[40535:80b] Resetting plugins due to page load.
+2014-01-26 17:01:12.488 RangerDanger[40535:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html
+2014-01-26 17:07:02.349 RangerDanger[41157:80b] Multi-tasking -> Device: YES, App: YES
+2014-01-26 17:07:02.357 RangerDanger[41157:80b] Unlimited access to network resources
+2014-01-26 17:07:02.543 RangerDanger[41157:80b] Resetting plugins due to page load.
+2014-01-26 17:07:02.715 RangerDanger[41157:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html
+2014-01-29 10:51:44.177 RangerDanger[66134:80b] Multi-tasking -> Device: YES, App: YES
+2014-01-29 10:51:44.377 RangerDanger[66134:80b] Unlimited access to network resources
+2014-01-29 10:51:47.672 RangerDanger[66134:80b] Resetting plugins due to page load.
+2014-01-29 10:51:49.148 RangerDanger[66134:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html#/tab/home
+2014-02-02 22:51:27.569 RangerDanger[99372:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-02 22:51:27.790 RangerDanger[99372:80b] Unlimited access to network resources
+2014-02-02 22:51:31.348 RangerDanger[99372:80b] Resetting plugins due to page load.
+2014-02-02 22:51:32.630 RangerDanger[99372:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html#/tab/home
+2014-02-02 22:51:50.625 RangerDanger[99372:80b] *** Assertion failure in -[UIApplication runModal:](), /SourceCache/UIKit_Sim/UIKit-2903.23/UIApplication.m:9465
+2014-02-02 22:51:50.750 RangerDanger[99372:80b] *** WebKit discarded an uncaught exception in the webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame: delegate: <NSInternalInconsistencyException> The view passed in does not have a window.
+2014-02-02 22:55:50.887 RangerDanger[99984:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-02 22:55:50.963 RangerDanger[99984:80b] Unlimited access to network resources
+2014-02-02 22:55:51.305 RangerDanger[99984:80b] Resetting plugins due to page load.
+2014-02-02 22:55:52.146 RangerDanger[99984:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html#/tab/home
+2014-02-02 22:56:41.614 RangerDanger[99984:80b] *** Assertion failure in -[UIApplication runModal:](), /SourceCache/UIKit_Sim/UIKit-2903.23/UIApplication.m:9465
+2014-02-02 22:56:41.632 RangerDanger[99984:80b] *** WebKit discarded an uncaught exception in the webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame: delegate: <NSInternalInconsistencyException> The view passed in does not have a window.
+2014-02-02 23:37:39.887 RangerDanger[1122:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-02 23:37:40.136 RangerDanger[1122:80b] Unlimited access to network resources
+2014-02-02 23:37:42.639 RangerDanger[1122:80b] Resetting plugins due to page load.
+2014-02-02 23:37:43.812 RangerDanger[1122:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html#/tab/home
+2014-02-03 20:47:48.595 RangerDanger[9343:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-03 20:47:49.378 RangerDanger[9343:80b] Unlimited access to network resources
+2014-02-03 20:47:54.428 RangerDanger[9343:80b] Resetting plugins due to page load.
+2014-02-03 20:47:55.831 RangerDanger[9343:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html#/tab/home
+2014-02-05 21:20:12.928 RangerDanger[33584:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-05 21:20:13.044 RangerDanger[33584:80b] Unlimited access to network resources
+2014-02-05 21:20:15.443 RangerDanger[33584:80b] Resetting plugins due to page load.
+2014-02-05 21:20:16.595 RangerDanger[33584:80b] Finished load of: file:///Users/kendowney/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/42503E62-DFAE-44DA-8913-C237AA05C6D1/RangerDanger.app/www/index.html#/tab/home
