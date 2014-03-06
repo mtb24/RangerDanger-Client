@@ -1,0 +1,11 @@
+
+      <div class="modal">
+        <ion-header class="bar bar-header bar-assertive">
+          <button class="button button-clear button-positive" ng-click="saveModal()">Save</button>
+          <h1 class="title">Drop pin on map</h1>
+          <button class="button button-clear button-positive" ng-click="closeModal()">Cancel</button>
+        </ion-header>
+        <ion-content has-header="true" padding="true">
+          <leaflet id="modalmap" markers="marker" center="center" width="640" height="400"></leaflet>
+        </ion-content>
+      </div>

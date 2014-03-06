@@ -1,0 +1,35 @@
+
+  <ion-view title="'Preferences'">
+    <ion-content has-header="true" padding="true">
+      <form name="preferencesForm" ng-controller="prefController">
+        <ul class="list">
+          <li class="item item-toggle">
+            Alert Type: {{ settings.alert_on }}
+            <label class="toggle">
+              <input type="checkbox" id="alert-on" name="alert-on" checked="checked" ng-model="settings.alert_on" ng-true-value="On" ng-false-value="Off">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item">
+            Alert distance {{ settings.alert_distance }} miles
+            <div id="distance" class="item range range-assertive">
+              <i class="icon ion-ios7-bolt-outline"></i>
+              <input type="range" id="alert-distance" name="alert-distance" min="0" max="10" value="3" ng-model="settings.alert_distance" onchange="Utilities.updateSlider(document.getElementById('alert-distance'));">
+              <i class="icon ion-ios7-bolt"></i>
+            </div>
+          </li>
+          <li class="item">
+            Alert Freshness {{ settings.alert_freshness }} minutes
+            <div id="freshness" class="item range range-assertive">
+              <i class="icon ion-ios7-bolt-outline"></i>
+              <input type="range" id="alert-freshness" name="alert-freshness" min="0" max="720" value="60" ng-model="settings.alert_freshness" onchange="Utilities.updateSlider(document.getElementById('alert-freshness'));">
+              <i class="icon ion-ios7-bolt"></i>
+            </div>
+          </li>
+        </ul>
+      </form>
+      {{ settings }}
+    </ion-content>
+  </ion-view>

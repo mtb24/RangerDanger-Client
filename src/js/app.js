@@ -1,5 +1,5 @@
 // some globals.
-var _APP_         = 'yourappname'
+var _APP_         = 'rangerdanger'
   , _CONTROLLERS_ = _APP_ + '.controllers'
   , _DIRECTIVES_  = _APP_ + '.directives'
   , _FILTERS_     = _APP_ + '.filters'
@@ -11,7 +11,7 @@ angular.module(_APP_, [
   // Your application's namespaced modules
    // so they won't conflict with other
    // modules. You shouldn't have to touch
-   // these unless you want to.             
+   // these unless you want to.
   _CONTROLLERS_,
   _DIRECTIVES_,
   _FILTERS_,
@@ -25,17 +25,39 @@ angular.module(_APP_, [
   // installed via Bower. Don't forget to add the module
   // to your Gruntfile's bower components if you want
   // to use it!
+  'ui.router',
   'ngTouch',
-  'ngRoute'
-
+  'ngSanitize',
+  'ngAnimate',
+  'ngResource',
+  'ionic',
+  'ionic.service.platform',
+  'ionic.ui.content',
+  'ionic.ui.list',
+  'ionic.service.loading',
+  'leaflet-directive'
+  //'angularLocalStorage',
+  //'btford.socket-io',
+  //'ngSails',
 
 ]);
 
 angular.module(_APP_).run([
-  '$rootScope',
-  function($rootScope) {
+  '$rootScope', 'Utilities',
+  function($rootScope, Utilities) {
 
-    // intial run code here
+    /* If no user preferences are defined, set some defaults */
+    if( !Utilities.getStorageItem('settings') ){
+      Utilities.setStorageItem('settings', {
+        'alert_on': 'On',
+        'alert_distance': 3,
+        'alert_freshness': 60
+      });
+      console.log("Default settings loaded in LocalStorage");
+    }
+
+    /* Get alert data from service and store in localstorage */
+
 
   }
 ]);

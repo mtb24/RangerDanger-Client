@@ -6,7 +6,7 @@
 
 module.exports = function(grunt) {
 
-  var _APP_NAME_ = "CHANGE ME IN Gruntfile.js";
+  var _APP_NAME_ = "RangerDanger";
 
   // initial grunt configuration
   grunt.initConfig({
@@ -31,8 +31,9 @@ module.exports = function(grunt) {
         vendor: [
 
           // Add additional Bower components here
-          '<%= bowerDir %>/bootstrap/dist/css/bootstrap.css',
-          '<%= bowerDir %>/font-awesome/css/font-awesome.css'
+          '<%= bowerDir %>/ionic/release/css/ionic.css',
+          '<%= bowerDir %>/font-awesome/css/font-awesome.css',
+          '<%= bowerDir %>/leaflet/dist/leaflet.css'
 
         ],
         // shouldn't need to touch this
@@ -45,8 +46,18 @@ module.exports = function(grunt) {
         vendor: [
           // add any Bower components here.
           '<%= bowerDir %>/angular/angular.js',
-          '<%= bowerDir %>/angular-route/angular-route.js',
-          '<%= bowerDir %>/angular-touch/angular-touch.js'
+          '<%= bowerDir %>/angular-ui-router/release/angular-ui-router.js',
+          '<%= bowerDir %>/angular-touch/angular-touch.js',
+          '<%= bowerDir %>/angular-sanitize/angular-sanitize.js',
+          '<%= bowerDir %>/angular-animate/angular-animate.js',
+          '<%= bowerDir %>/angular-resource/angular-resource.js',
+          //'<%= bowerDir %>/angular-sails/angular-sails.js',
+          //'<%= bowerDir %>/angularLocalStorage/angularLocalStorage.js',
+          //'<%= bowerDir %>/socket.io/lib/socket.io.js',
+          //'<%= bowerDir %>/angular-socket-io/socket.js',
+          '<%= bowerDir %>/ionic/release/js/ionic.js',
+          '<%= bowerDir %>/ionic/release/js/ionic-angular.js',
+          '<%= bowerDir %>/leaflet/dist/leaflet.js'
         ],
         // shouldn't need to touch this.
         src: [
@@ -148,7 +159,11 @@ module.exports = function(grunt) {
       },
       img: {
         files: [
-          { expand: true, cwd: '<%= srcDir %>/img/', src: ['**'], dest: '<%= appDir %>/img/' }
+          { expand: true, cwd: '<%= srcDir %>/img/', src: ['**'], dest: '<%= appDir %>/img/' },
+          { expand: true, cwd: '<%= srcDir %>/img/fonts/', src: ['**'], dest: '<%= appDir %>/img/fonts/' },
+          { expand: true, cwd: '<%= srcDir %>/img/icon/', src: ['**'], dest: '<%= appDir %>/img/icon/' },
+          { expand: true, cwd: '<%= srcDir %>/img/screen/', src: ['**'], dest: '<%= appDir %>/img/screen/' },
+          { expand: true, cwd: '<%= bowerDir %>/leaflet/dist/images/', src: ['**'], dest: '<%= appDir %>/img/maps/' }
         ]
       },
       partials: {

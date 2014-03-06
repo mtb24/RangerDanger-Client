@@ -5,17 +5,55 @@
  *
  */
 angular.module(_APP_).config([
-  '$routeProvider',
-  function($routeProvider) {
+  '$stateProvider', '$urlRouterProvider', '$locationProvider',
+  function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    // Define routes here.
-    $routeProvider
-      .when('/', {
-        templateUrl: 'html/partials/home/index.html',
-        controller: 'HomeController'
+    $stateProvider
+
+      /* HTML5 mode on */
+      //$locationProvider.html5Mode(true);
+
+      .state("tabs", {
+        url: "/tab",
+        abstract: true
+        //templateUrl: "tabs.html"
       })
-      .otherwise({ redirectTo: '/' });
+
+      .state("home", {
+        url: "/home",
+        views: {
+          'home-tab': {
+            templateUrl: "html/partials/home/home.html",
+            controller:  'homeController'
+          }
+        }
+      })
+
+
+      .state('map', {
+        url: "/map",
+        views: {
+          'map-tab': {
+            templateUrl: "html/partials/map/map.html",
+            controller:  'mapController'
+          }
+        }
+      })
+
+      .state('preferences', {
+        url: "/preferences",
+        views: {
+          'preferences-tab': {
+            templateUrl: "html/partials/preferences/preferences.html",
+            controller:  'prefController'
+          }
+        }
+      });
+
+      /* Default Route */
+      $urlRouterProvider.otherwise("/home");
+
+
 
   }
 ]);
-

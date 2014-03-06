@@ -3,7 +3,7 @@
 <head>
   <title><%= appName %></title>
   <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no" /> <!-- disable "click-to-call" detection -->
+  <meta name="format-detection" content="telephone=no" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <base href="/"></base>
@@ -29,40 +29,33 @@
 </head>
 <body>
 
-  <!--  App container  -->
   <div id="container" class="container">
 
-    <!--  Header  -->
-    <ion-nav-bar animation="nav-title-slide-ios7"
-             type="bar-positive"
-             back-button-type="button-icon"
-             back-button-icon="ion-arrow-left-c"></ion-nav-bar>
+    <ion-nav-bar 
+        animation="nav-title-slide-ios7" 
+        type="bar-positive" 
+        back-button-type="button-icon" 
+        back-button-icon="ion-arrow-left-c">
+    </ion-nav-bar>
 
-    <!--  View container  -->
     <ion-nav-view ui-view animation="slide-left-right"></ion-nav-view>
 
-    <!--  Footer Tabs container  -->
     <ion-tabs tabs-style="tabs-icon-top" tabs-type="tabs-positive">
 
-      <!--  Home Tab  -->
       <ion-tab title="Home" icon="ion-home" href="#/home">
         <ion-nav-view name="home-tab"></ion-nav-view>
       </ion-tab>
 
-      <!--  Map Tab  -->
       <ion-tab title="Map" icon="ion-alert-circled" href="#/map">
         <ion-nav-view name="map-tab"></ion-nav-view>
       </ion-tab>
 
-      <!--  Preferences Tab  -->
-      <ion-tab title="Preferences" icon="ion-settings" href="#/preferences">
+      <ion-tab title="Preferences" icon="ion-settings" href="/preferences">
         <ion-nav-view name="preferences-tab"></ion-nav-view>
       </ion-tab>
     </ion-tabs>
 
   </div>
-
-  <!--  Phonegap initialization  -->
   <script type="text/javascript">
     pg.initialize();
   </script>
