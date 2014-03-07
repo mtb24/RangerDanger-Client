@@ -43,8 +43,26 @@ angular.module(_APP_, [
 ]);
 
 angular.module(_APP_).run([
-  '$rootScope', 'Utilities',
-  function($rootScope, Utilities) {
+  '$rootScope', 'Geolocation', 'Utilities',
+  function($rootScope, Geolocation, Utilities) {
+
+
+    /*
+       Get Location
+    */
+   Geolocation.watchLocation().then(
+    function(position){
+        Utilities.setStorageItem('current_location', {
+            'updated': new Date().getTime(),
+            'lat':position.coords.latitude,
+            'lng':position.coords.longitude
+        });
+        $rootScope.current_location = Utilities.getStorageItem('current_location');
+        console.log(Utilities.getStorageItem('current_location'));
+     },
+     function(err){
+      console.log("Geolocation error: "+err);
+     });
 
     /*
        If settings have been customized, use them. Otherwise use defaults.

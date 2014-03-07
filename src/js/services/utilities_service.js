@@ -5,13 +5,13 @@ angular.module(_SERVICES_)
 
 			/* Event methods */
 		    onOffline: function(e) {
-		        Utilities.setStorageItem('device', {
+		        Utilities.setStorageItem('connection', {
 		        	'status': 'Offline'
 		        });
 		        console.log("Offline event fired");
 		    },
 		    onOnline: function(e) {
-		        Utilities.setStorageItem('device', {
+		        Utilities.setStorageItem('connection', {
 		        	'status': 'Online'
 		        });
 		        console.log("Online event fired");

@@ -1,5 +1,5 @@
 angular.module(_SERVICES_)
-	.factory("Geolocation", function ($q) {
+	.factory("Geolocation", ['$q', function ($q) {
 		return {
 
 			getLocation: function() {
@@ -33,7 +33,9 @@ angular.module(_SERVICES_)
 						console.log("GeoLocation Error message: "+error.message);
 					},
 					/* options */
-					{ enableHighAccuracy: true }
+					{ enableHighAccuracy: true,
+					  maximumAge: 75000
+					}
 				);
 				return q.promise;
 			},
@@ -41,4 +43,4 @@ angular.module(_SERVICES_)
 				navigator.geolocation.clearWatch(watchID);
 			}
 		};
-});
+}]);
