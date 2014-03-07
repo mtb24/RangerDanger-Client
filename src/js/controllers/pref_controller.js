@@ -9,7 +9,7 @@ angular.module(_CONTROLLERS_)
 				console.log("New alert_on change detected: "+newVal);
 				$scope.settings.alert_on = newVal;
 				Utilities.setStorageItem('settings', $scope.settings);
-				//$scope.$digest();
+				$scope.$apply();
 			}
 		});
 		$scope.$watch('settings.alert_distance', function(newVal, oldVal){
