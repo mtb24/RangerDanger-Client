@@ -46,15 +46,17 @@ angular.module(_APP_).run([
   '$rootScope', 'Utilities',
   function($rootScope, Utilities) {
 
-    /* If no user preferences are defined, set some defaults */
-    if( !Utilities.getStorageItem('settings') ){
-      Utilities.setStorageItem('settings', {
+    /*
+       If settings have been customized, use them. Otherwise use defaults.
+       Settings are not persisted until changed from default.
+    */
+    var settings = Utilities.getStorageItem('settings') || {
         'alert_on': 'On',
         'alert_distance': 3,
         'alert_freshness': 60
-      });
-      console.log("Default settings loaded in LocalStorage");
-    }
+    };
+    $rootScope.settings = settings;
+    console.log("Settings loaded");
 
     /* Get alert data from service and store in localstorage */
 
